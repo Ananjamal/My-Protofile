@@ -390,6 +390,10 @@ h3{
     gap: 20px;
     flex-wrap: wrap;
 }
+link[rel="shortcut icon"] {
+    border-radius: 50%;
+}
+
     /*
 .project-box{
     position: relative;
