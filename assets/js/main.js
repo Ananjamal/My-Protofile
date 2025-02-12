@@ -1,13 +1,21 @@
 /* ----- NAVIGATION BAR FUNCTION ----- */
-function myMenuFunction(){
+function myMenuFunction() {
   var menuBtn = document.getElementById("myNavMenu");
-
-  if(menuBtn.className === "nav-menu"){
-    menuBtn.className += " responsive";
+  if (menuBtn.className === "nav-menu") {
+      menuBtn.className += " responsive";
   } else {
-    menuBtn.className = "nav-menu";
+      menuBtn.className = "nav-menu";
   }
 }
+
+// إضافة هذا الجزء لإخفاء القائمة عند النقر على أي رابط
+document.querySelectorAll('.nav_menu_list a').forEach(link => {
+  link.addEventListener('click', function() {
+      var menuBtn = document.getElementById("myNavMenu");
+      menuBtn.className = "nav-menu"; // إخفاء القائمة
+  });
+});
+
 
 /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
 window.onscroll = function() {headerShadow()};
